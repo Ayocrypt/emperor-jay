@@ -37,3 +37,20 @@ Work Log:
 
 Stage Summary:
 - Site is now fully mobile-optimized: no sideways scroll at any width, fluid typography, large touch targets, iOS safe areas. All prior functionality intact.
+
+---
+Task ID: 3
+Agent: Main agent (Super Z)
+Task: Use the user's uploaded official logo + update phone number 0816 474 6842 → 0916 474 6842.
+
+Work Log:
+- Processed `upload/pasted_image_1792025261021.png` (scripts/process_logo.py). Key finding: the upload is a white card (rows 14-273) with black outer margin — gold emblem/wordmark sit ON WHITE (initial "black card" assumption from preview rendering was wrong; verified via raw pixel sampling).
+- Keyed white → transparency via "distance from white" alpha (smoothstep on 255 - min(r,g,b)); full lockup uses gentle ramp (10-55) to keep soft glow, emblem uses harder ramp (30-90) to shed halo.
+- Split bands via row-gap analysis; emblem = top band (first gap from top at row 179). Assets: `public/brand/emperor-jay-emblem.png` (191x191), `public/brand/emperor-jay-logo-full.png` (448x260, emblem + wordmark + "...small but mighty" script tagline), `src/app/icon.png` (256px favicon).
+- Rewrote `ej-logo.tsx`: EjEmblem → next/image of real emblem (priority option), added EjLogoFull; EjLockup keeps typographic wordmark + real emblem. Deleted old `src/app/icon.svg` + unused `public/logo.svg`.
+- Hero orbit center now shows the real emblem (priority preload). Footer brand column shows the full official logo (w-52 sm:w-60), paragraph copy de-duplicated ("Small but mighty" now lives in the logo image).
+- Phone updates: contact.tsx + footer.tsx — value '0916 474 6842', href 'tel:+2349164746842'. WhatsApp stays on 0806 464 5886 (unchanged per doc).
+- Verified via agent-browser: desktop 1280 (hero navbar emblem, footer full lockup, contact cards), mobile 390 + 320 — zero horizontal overflow at both, emblem renders in orbit with chips, 0916 number visible in contact card + footer. Favicon + brand assets return 200. eslint clean, zero page errors.
+
+Stage Summary:
+- Site now uses the authentic Emperor Jay Enterprises logo everywhere the old SVG replica appeared (navbar, hero orbit, footer, favicon), phone number corrected to 0916 474 6842, mobile responsiveness re-verified intact.

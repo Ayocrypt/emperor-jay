@@ -127,7 +127,7 @@ export function Hero() {
           <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle,rgba(212,175,55,0.18),transparent_62%)] blur-2xl" />
           {/* emblem */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <EjEmblem className="h-[46%] w-[46%] drop-shadow-[0_0_28px_rgba(212,175,55,0.45)]" />
+            <EjEmblem priority className="h-[46%] w-[46%] drop-shadow-[0_0_28px_rgba(212,175,55,0.45)]" />
           </div>
 
           {/* floating skill chips */}

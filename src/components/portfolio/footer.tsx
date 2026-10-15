@@ -1,7 +1,7 @@
 'use client'
 
 import { Phone } from 'lucide-react'
-import { EjLockup } from './ej-logo'
+import { EjLogoFull } from './ej-logo'
 
 const NAV = [
   { href: '#about', label: 'About' },
@@ -20,9 +20,9 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1.2fr]">
           {/* brand */}
           <div className="flex flex-col gap-4">
-            <EjLockup />
+            <EjLogoFull className="w-52 sm:w-60" />
             <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">
-              Small but mighty — building future innovators through hands-on IT courses and digital
+              Building future innovators through hands-on IT courses and digital
               skills training in schools.
             </p>
           </div>
@@ -63,11 +63,11 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+2348164746842"
+                  href="tel:+2349164746842"
                   className="inline-flex items-center gap-2.5 text-sm text-muted-foreground transition-colors hover:text-gold"
                 >
                   <Phone className="h-3.5 w-3.5 text-gold/70" aria-hidden />
-                  0816 474 6842
+                  0916 474 6842
                 </a>
               </li>
             </ul>

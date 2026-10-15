@@ -14,8 +14,8 @@ const CONTACTS = [
   {
     icon: Phone,
     label: 'Call us',
-    value: '0816 474 6842',
-    href: 'tel:+2348164746842',
+    value: '0916 474 6842',
+    href: 'tel:+2349164746842',
     cta: 'Call now',
   },
   {
