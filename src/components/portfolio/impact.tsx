@@ -50,7 +50,7 @@ const SCHOOL_PROVIDES = [
 
 export function Impact() {
   return (
-    <section id="impact" className="relative scroll-mt-24 py-20 sm:py-28">
+    <section id="impact" className="relative scroll-mt-24 overflow-hidden py-16 sm:py-24">
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Impact & benefits"
@@ -63,14 +63,14 @@ export function Impact() {
         />
 
         {/* stats band */}
-        <Reveal className="mt-14">
+        <Reveal className="mt-12 sm:mt-14">
           <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-gold/20 bg-gold/10 lg:grid-cols-4">
             {STATS.map((stat) => (
-              <div key={stat.label} className="flex flex-col gap-2 bg-card px-6 py-8 sm:px-8">
-                <dt className="order-2 text-xs leading-relaxed tracking-wide text-muted-foreground">
+              <div key={stat.label} className="flex flex-col gap-2 bg-card px-5 py-6 sm:px-8 sm:py-8">
+                <dt className="order-2 text-[11px] leading-relaxed tracking-wide text-muted-foreground sm:text-xs">
                   {stat.label}
                 </dt>
-                <dd className="font-display order-1 text-3xl font-bold text-gold-gradient sm:text-4xl">
+                <dd className="font-display order-1 text-[clamp(1.4rem,7.2vw,1.7rem)] leading-none font-bold text-gold-gradient sm:text-4xl">
                   {stat.value}
                 </dd>
               </div>
@@ -79,10 +79,10 @@ export function Impact() {
         </Reveal>
 
         {/* benefit cards */}
-        <div className="mt-6 grid gap-5 sm:grid-cols-2 sm:gap-6">
+        <div className="mt-4 grid gap-4 sm:grid-cols-2 sm:gap-6">
           {BENEFITS.map((benefit, i) => (
             <Reveal key={benefit.title} delay={0.06 * i}>
-              <article className="group flex h-full items-start gap-5 rounded-2xl border border-border bg-card/70 p-6 transition-all duration-300 hover:border-gold/40 sm:p-7">
+              <article className="group flex h-full items-start gap-4 rounded-2xl border border-border bg-card/70 p-5 transition-all duration-300 hover:border-gold/40 sm:gap-5 sm:p-7">
                 <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-gold/25 bg-gold/[0.07] transition-transform duration-300 group-hover:scale-110">
                   <benefit.icon className="h-5 w-5 text-gold" aria-hidden />
                 </span>
@@ -96,9 +96,9 @@ export function Impact() {
         </div>
 
         {/* responsibility split */}
-        <div className="mt-6 grid gap-5 sm:gap-6 md:grid-cols-2">
+        <div className="mt-4 grid gap-4 sm:gap-6 md:grid-cols-2">
           <Reveal delay={0.08}>
-            <div className="h-full rounded-2xl border border-gold/25 bg-gradient-to-br from-gold/[0.08] via-card to-card p-7 sm:p-8">
+            <div className="h-full rounded-2xl border border-gold/25 bg-gradient-to-br from-gold/[0.08] via-card to-card p-6 sm:p-8">
               <span className="text-[11px] font-semibold tracking-[0.3em] text-gold uppercase">
                 Emperor Jay provides
               </span>
@@ -115,7 +115,7 @@ export function Impact() {
             </div>
           </Reveal>
           <Reveal delay={0.14}>
-            <div className="h-full rounded-2xl border border-border bg-card/70 p-7 sm:p-8">
+            <div className="h-full rounded-2xl border border-border bg-card/70 p-6 sm:p-8">
               <span className="text-[11px] font-semibold tracking-[0.3em] text-muted-foreground uppercase">
                 The school provides
               </span>

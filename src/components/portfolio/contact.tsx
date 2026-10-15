@@ -29,11 +29,11 @@ const CONTACTS = [
 
 export function Contact() {
   return (
-    <section id="contact" className="relative scroll-mt-24 py-20 sm:py-28">
+    <section id="contact" className="relative scroll-mt-24 py-16 sm:py-24">
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
         {/* CTA band */}
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl border border-gold/25 bg-gradient-to-br from-secondary via-card to-card px-7 py-14 text-center sm:px-12 sm:py-16">
+          <div className="relative overflow-hidden rounded-3xl border border-gold/25 bg-gradient-to-br from-secondary via-card to-card px-5 py-11 text-center sm:px-12 sm:py-16">
             <div
               aria-hidden
               className="pointer-events-none absolute -top-24 left-1/2 h-64 w-[36rem] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse,rgba(212,175,55,0.16),transparent_65%)]"
@@ -57,7 +57,7 @@ export function Contact() {
             <div className="relative mt-9 flex flex-wrap items-center justify-center gap-4">
               <a
                 href="tel:+2348064645886"
-                className="inline-flex items-center gap-2.5 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-[0_0_28px_rgba(212,175,55,0.3)] transition-all hover:shadow-[0_0_40px_rgba(212,175,55,0.5)] hover:brightness-110"
+                className="inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-primary px-7 py-4 text-sm font-semibold text-primary-foreground shadow-[0_0_28px_rgba(212,175,55,0.3)] transition-all hover:shadow-[0_0_40px_rgba(212,175,55,0.5)] hover:brightness-110 sm:w-auto sm:py-3.5"
               >
                 <Phone className="h-4 w-4" aria-hidden />
                 0806 464 5886
@@ -66,7 +66,7 @@ export function Contact() {
                 href="https://wa.me/2348064645886"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 rounded-full border border-gold/40 px-7 py-3.5 text-sm font-semibold text-gold transition-colors hover:bg-gold/10"
+                className="inline-flex w-full items-center justify-center gap-2.5 rounded-full border border-gold/40 px-7 py-4 text-sm font-semibold text-gold transition-colors hover:bg-gold/10 sm:w-auto sm:py-3.5"
               >
                 <MessageCircle className="h-4 w-4" aria-hidden />
                 Chat on WhatsApp
@@ -76,14 +76,14 @@ export function Contact() {
         </Reveal>
 
         {/* contact cards */}
-        <div className="mt-10 grid gap-5 sm:grid-cols-3 sm:gap-6">
+        <div className="mt-6 grid gap-4 sm:mt-10 sm:grid-cols-3 sm:gap-6">
           {CONTACTS.map((contact, i) => (
             <Reveal key={contact.href} delay={0.06 * i}>
               <a
                 href={contact.href}
                 target={contact.href.startsWith('http') ? '_blank' : undefined}
                 rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                className="group flex h-full flex-col items-start gap-4 rounded-2xl border border-border bg-card/70 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold/45 sm:p-7"
+                className="group flex h-full flex-col items-start gap-4 rounded-2xl border border-border bg-card/70 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-gold/45 sm:p-7"
               >
                 <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-gold/25 bg-gold/[0.07] transition-transform duration-300 group-hover:scale-110">
                   <contact.icon className="h-5 w-5 text-gold" aria-hidden />

@@ -32,7 +32,7 @@ const STEPS = [
 
 export function Process() {
   return (
-    <section id="process" className="relative scroll-mt-24 py-20 sm:py-28">
+    <section id="process" className="relative scroll-mt-24 py-16 sm:py-24">
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="How it works"
@@ -44,7 +44,7 @@ export function Process() {
           description="Each term runs as a structured 10-week curriculum, with examinations held in the 11th week — deliberately kept clear of the school's general exams."
         />
 
-        <ol className="relative mt-16 grid gap-10 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4 lg:gap-6">
+        <ol className="relative mt-14 grid gap-9 sm:mt-16 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4 lg:gap-6">
           {/* connector line (desktop) */}
           <div
             aria-hidden
@@ -68,7 +68,7 @@ export function Process() {
           ))}
         </ol>
 
-        <Reveal delay={0.15} className="mt-14">
+        <Reveal delay={0.15} className="mt-10 sm:mt-14">
           <p className="mx-auto max-w-3xl text-center text-sm leading-relaxed text-muted-foreground">
             <span className="font-semibold text-gold">Showcase day:</span> every term, students present
             their own projects at the PTA forum — so parents see exactly what their children can build,

@@ -65,11 +65,11 @@ const PROGRAMS = [
 
 export function Programs() {
   return (
-    <section id="programs" className="relative scroll-mt-24 py-20 sm:py-28">
+    <section id="programs" className="relative scroll-mt-24 overflow-hidden py-16 sm:py-24">
       {/* section glow */}
       <div
         aria-hidden
-        className="pointer-events-none absolute top-1/4 left-1/2 h-[28rem] w-[42rem] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse,rgba(212,175,55,0.06),transparent_65%)]"
+        className="pointer-events-none absolute top-1/4 left-1/2 h-[28rem] w-[42rem] max-w-[150vw] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse,rgba(212,175,55,0.06),transparent_65%)]"
       />
 
       <div className="relative mx-auto w-full max-w-6xl px-5 sm:px-8">
@@ -83,10 +83,10 @@ export function Programs() {
           description="Structured IT courses tailored to every class level, plus the infrastructure to support them — delivered by our own instructors, with materials and software provided by us."
         />
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
+        <div className="mt-12 grid gap-4 sm:mt-14 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
           {PROGRAMS.map((program, i) => (
             <Reveal key={program.title} delay={0.05 * (i % 4)}>
-              <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card/70 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold/45 hover:shadow-[0_16px_40px_rgba(0,0,0,0.4)]">
+              <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card/70 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-gold/45 hover:shadow-[0_16px_40px_rgba(0,0,0,0.4)] sm:p-6">
                 <div
                   aria-hidden
                   className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"

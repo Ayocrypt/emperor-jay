@@ -20,12 +20,12 @@ export function Marquee() {
   return (
     <div
       aria-hidden
-      className="relative overflow-hidden border-y border-gold/15 bg-secondary/60 py-5"
+      className="relative overflow-hidden border-y border-gold/15 bg-secondary/60 py-4 sm:py-5"
     >
-      <div className="animate-marquee flex w-max items-center gap-10 pr-10">
+      <div className="animate-marquee flex w-max items-center gap-8 pr-8 sm:gap-10 sm:pr-10">
         {row.map((item, i) => (
-          <span key={`${item}-${i}`} className="flex items-center gap-10">
-            <span className="font-display text-sm font-semibold tracking-[0.3em] whitespace-nowrap text-gold/85 uppercase">
+          <span key={`${item}-${i}`} className="flex items-center gap-8 sm:gap-10">
+            <span className="font-display text-xs font-semibold tracking-[0.3em] whitespace-nowrap text-gold/85 uppercase sm:text-sm">
               {item}
             </span>
             <Sparkle className="h-3 w-3 shrink-0 text-gold/50" />

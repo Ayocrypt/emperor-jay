@@ -94,9 +94,12 @@
   }
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
   }
   body {
     @apply bg-background text-foreground;
+    overflow-x: clip;
+    -webkit-tap-highlight-color: transparent;
   }
   ::selection {
     background: rgba(212, 175, 55, 0.32);

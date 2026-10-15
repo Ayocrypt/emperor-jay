@@ -49,7 +49,7 @@ export function Navbar() {
     >
       <nav
         aria-label="Primary"
-        className="mx-auto flex w-full max-w-6xl items-center justify-between px-5 sm:px-8"
+        className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 sm:px-8"
       >
         <a href="#top" aria-label="Emperor Jay Enterprises — back to top" onClick={() => setOpen(false)}>
           <EjLockup />
@@ -117,7 +117,7 @@ export function Navbar() {
                       setOpen(false)
                       scrollToSection(link.href)
                     }}
-                    className="block rounded-lg px-3 py-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                    className="block rounded-lg px-3 py-3.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
                   >
                     {link.label}
                   </a>

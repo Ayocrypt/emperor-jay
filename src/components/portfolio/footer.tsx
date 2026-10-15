@@ -16,7 +16,7 @@ export function Footer() {
 
   return (
     <footer className="mt-auto border-t border-border bg-secondary/40">
-      <div className="mx-auto w-full max-w-6xl px-5 py-12 sm:px-8">
+      <div className="mx-auto w-full max-w-6xl px-5 pt-12 pb-[max(3rem,env(safe-area-inset-bottom))] sm:px-8">
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1.2fr]">
           {/* brand */}
           <div className="flex flex-col gap-4">
@@ -37,7 +37,7 @@ export function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-muted-foreground transition-colors hover:text-gold"
+                    className="inline-block py-1.5 text-sm text-muted-foreground transition-colors hover:text-gold"
                   >
                     {link.label}
                   </a>

@@ -20,3 +20,20 @@ Work Log:
 Stage Summary:
 - Deliverable: single-page portfolio site at `/` — black & gold premium theme, fully responsive, scroll-reveal animations, working mobile nav, contact via tel:+2348064645886 / tel:+2348164746842 / wa.me/2348064645886.
 - Key files: src/app/{page,layout,globals.css,icon.svg}, src/components/portfolio/*.
+
+---
+Task ID: 2
+Agent: Main agent (Super Z)
+Task: Make portfolio site extremely mobile responsive (user reported poor mobile experience).
+
+Work Log:
+- Audited at 320/360/390/414/768px via agent-browser; found 176px+ horizontal overflow (page 496px wide at 320px) caused by Programs section decorative glow (w-[42rem]) without overflow clipping.
+- Fixed overflow at source: added overflow-hidden to Programs/Impact sections + max-w-[150vw] on glow; global safety net via overflow-x: clip on html/body.
+- Compacted hero for phones: fluid clamp() headline, emblem shrunk to 15rem on mobile (was 24rem), stats switched to 3-col grid (no awkward wrap), full-width CTA buttons with 44px+ touch targets.
+- Tightened mobile rhythm across all sections: py-16 base, gap-4 grids, reduced card padding, smaller marquee text on phones.
+- Impact stats: fluid clamp() values so ₦10,000 fits its 2-col cell at 320px.
+- Mobile menu links bumped to 44px targets; footer iOS safe-area padding via env(safe-area-inset-bottom); viewportFit cover added; tap highlight removed.
+- Re-verified: zero horizontal overflow at 320/360/390/414/768px; screenshots confirm clean hero, stats, programs, contact, footer, and menu at 320px and 390px; lint clean.
+
+Stage Summary:
+- Site is now fully mobile-optimized: no sideways scroll at any width, fluid typography, large touch targets, iOS safe areas. All prior functionality intact.
